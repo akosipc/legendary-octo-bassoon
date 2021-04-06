@@ -7,6 +7,6 @@ class Artist < ApplicationRecord
   has_and_belongs_to_many :genres
 
   def disband
-    update_attributes(disbanded: true, disbanded_at: DateTime.now) unless disbanded?
+    update(disbanded: true, disbanded_at: DateTime.now) unless disbanded?
   end
 end
